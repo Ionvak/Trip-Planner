@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ionvak/Documents/Projects/GUI_task1+2/tripPlanner/tripPlanner.csproj",
+      "projectUniqueName": "/home/ionvak/Documents/Projects/25L-EGUI-Elshekh_Ali-Mahmoud/lab1/tripPlanner/tripPlanner.csproj",
       "projectName": "tripPlanner",
-      "projectPath": "/home/ionvak/Documents/Projects/GUI_task1+2/tripPlanner/tripPlanner.csproj",
+      "projectPath": "/home/ionvak/Documents/Projects/25L-EGUI-Elshekh_Ali-Mahmoud/lab1/tripPlanner/tripPlanner.csproj",
       "packagesPath": "/home/ionvak/.nuget/packages/",
-      "outputPath": "/home/ionvak/Documents/Projects/GUI_task1+2/tripPlanner/obj/",
+      "outputPath": "/home/ionvak/Documents/Projects/25L-EGUI-Elshekh_Ali-Mahmoud/lab1/tripPlanner/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ionvak/.nuget/NuGet/NuGet.Config"
