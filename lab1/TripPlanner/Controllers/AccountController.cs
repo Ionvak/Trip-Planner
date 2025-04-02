@@ -29,12 +29,22 @@ namespace TripPlanner.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult Register() => View();
-
         [HttpPost]
         public IActionResult Register(string username, string password)
         {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                ViewBag.Error = "Username and password are required.";
+                return View();
+            }
+
+            var existingUser = _context.Users.FirstOrDefault(u => u.Username == username);
+            if (existingUser != null)
+            {
+                ViewBag.Error = "Username is already taken.";
+                return View();
+            }
+
             var user = new User { Username = username, Password = password };
             _context.Users.Add(user);
             _context.SaveChanges();

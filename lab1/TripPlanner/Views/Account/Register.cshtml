@@ -1,12 +1,12 @@
 <form method="post">
-    <input type="hidden" name="Id" value="@Model.Id" />
-    <label>Title:</label>
-    <input type="text" name="Title" value="@Model.Title" required />
-    <label>Description:</label>
-    <textarea name="Description" required>@Model.Description</textarea>
-    <label>Capacity:</label>
-    <input type="number" name="Capacity" value="@Model.Capacity" required />
-    <label>Date:</label>
-    <input type="date" name="Date" value="@Model.Date" required />
-    <button type="submit">Save</button>
+    <label>Username:</label>
+    <input type="text" name="username" required />
+    <label>Password:</label>
+    <input type="password" name="password" required />
+    <button type="submit">Register</button>
 </form>
+
+@if (ViewBag.Error != null)
+{
+    <p>@ViewBag.Error</p>
+}

@@ -7,14 +7,19 @@ namespace TripPlanner.Controllers
     public class TripController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public TripController(ApplicationDbContext context)
+
+        public TripController(ApplicationDbContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public IActionResult Index()
         {
+            var userId = _httpContextAccessor.HttpContext.Session.GetInt32("UserId");
+
             var trips = _context.Trips.ToList();
             return View(trips);
         }
