@@ -61,43 +61,43 @@ namespace TripPlanner.Controllers
             }
             return RedirectToAction("Index");
         }
-    }
 
-    [HttpGet]
-    public IActionResult Edit(int id)
-    {
-        var trip = _context.Trips.Find(id);
-        var userId = HttpContext.Session.GetInt32("UserId");
-        if (trip == null || trip.OwnerId != userId) return RedirectToAction("Index");
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var trip = _context.Trips.Find(id);
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (trip == null || trip.OwnerId != userId) return RedirectToAction("Index");
 
-        return View(trip);
-    }
+            return View(trip);
+        }
 
-    [HttpPost]
-    public IActionResult Edit(Trip updatedTrip)
-    {
-        var trip = _context.Trips.Find(updatedTrip.Id);
-        var userId = HttpContext.Session.GetInt32("UserId");
-        if (trip == null || trip.OwnerId != userId) return RedirectToAction("Index");
+        [HttpPost]
+        public IActionResult Edit(Trip updatedTrip)
+        {
+            var trip = _context.Trips.Find(updatedTrip.Id);
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (trip == null || trip.OwnerId != userId) return RedirectToAction("Index");
 
-        trip.Title = updatedTrip.Title;
-        trip.Description = updatedTrip.Description;
-        trip.Capacity = updatedTrip.Capacity;
-        trip.Date = updatedTrip.Date;
+            trip.Title = updatedTrip.Title;
+            trip.Description = updatedTrip.Description;
+            trip.Capacity = updatedTrip.Capacity;
+            trip.Date = updatedTrip.Date;
 
-        _context.SaveChanges();
-        return RedirectToAction("Index");
-    }
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
-    [HttpPost]
-    public IActionResult Delete(int id)
-    {
-        var trip = _context.Trips.Find(id);
-        var userId = HttpContext.Session.GetInt32("UserId");
-        if (trip == null || trip.OwnerId != userId) return RedirectToAction("Index");
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            var trip = _context.Trips.Find(id);
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (trip == null || trip.OwnerId != userId) return RedirectToAction("Index");
 
-        _context.Trips.Remove(trip);
-        _context.SaveChanges();
-        return RedirectToAction("Index");
+            _context.Trips.Remove(trip);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
