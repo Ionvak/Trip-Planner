@@ -1,0 +1,7 @@
+/home/ionvak/Documents/Projects/25L-EGUI-Elshekh_Ali-Mahmoud/lab1/TripPlanner/obj/Debug/net8.0/TripPlanner.GeneratedMSBuildEditorConfig.editorconfig
+/home/ionvak/Documents/Projects/25L-EGUI-Elshekh_Ali-Mahmoud/lab1/TripPlanner/obj/Debug/net8.0/TripPlanner.AssemblyInfoInputs.cache
+/home/ionvak/Documents/Projects/25L-EGUI-Elshekh_Ali-Mahmoud/lab1/TripPlanner/obj/Debug/net8.0/TripPlanner.AssemblyInfo.cs
+/home/ionvak/Documents/Projects/25L-EGUI-Elshekh_Ali-Mahmoud/lab1/TripPlanner/obj/Debug/net8.0/TripPlanner.csproj.CoreCompileInputs.cache
+/home/ionvak/Documents/Projects/25L-EGUI-Elshekh_Ali-Mahmoud/lab1/TripPlanner/obj/Debug/net8.0/TripPlanner.MvcApplicationPartsAssemblyInfo.cache
+/home/ionvak/Documents/Projects/25L-EGUI-Elshekh_Ali-Mahmoud/lab1/TripPlanner/obj/Debug/net8.0/TripPlanner.RazorAssemblyInfo.cache
+/home/ionvak/Documents/Projects/25L-EGUI-Elshekh_Ali-Mahmoud/lab1/TripPlanner/obj/Debug/net8.0/TripPlanner.RazorAssemblyInfo.cs
