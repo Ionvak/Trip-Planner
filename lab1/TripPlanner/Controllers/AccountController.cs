@@ -29,6 +29,9 @@ namespace TripPlanner.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Register() => View();
+
         [HttpPost]
         public IActionResult Register(string username, string password)
         {
