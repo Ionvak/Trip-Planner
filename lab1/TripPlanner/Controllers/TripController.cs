@@ -18,8 +18,6 @@ namespace TripPlanner.Controllers
 
         public IActionResult Index()
         {
-            var userId = _httpContextAccessor.HttpContext.Session.GetInt32("UserId");
-
             var trips = _context.Trips.ToList();
             return View(trips);
         }

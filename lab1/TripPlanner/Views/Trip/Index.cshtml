@@ -7,9 +7,10 @@
     {
         <li> 
             <h2>@trip.Title</h2> - @trip.Description
+            <a href="/Trip/Register/@trip.Id">Register</a>
+            <a href="/Trip/Unregister/@trip.Id">Unregister</a>
             @if (HttpContextAccessor.HttpContext.Session.GetInt32("UserId") == trip.OwnerId)
             {
-                <a href="/Trip/Unregister/@trip.Id">Unregister</a>
                 <a href="/Trip/Edit/@trip.Id">Edit</a>
                 <form method="post" action="/Trip/Delete/@trip.Id">
                 <button type="submit">Delete</button>
