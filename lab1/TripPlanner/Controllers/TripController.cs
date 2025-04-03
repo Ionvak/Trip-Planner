@@ -43,7 +43,7 @@ namespace TripPlanner.Controllers
             if (userId == null) return RedirectToAction("Login", "Account");
 
             var trip = _context.Trips.Find(id);
-            if (trip != null && trip.ParticipantIds.Count < trip.Capacity)
+            if (trip != null && trip.ParticipantIds.Count < trip.Capacity && !trip.ParticipantIds.Contains(userId.Value))
             {
                 trip.ParticipantIds.Add(userId.Value);
                 _context.SaveChanges();
