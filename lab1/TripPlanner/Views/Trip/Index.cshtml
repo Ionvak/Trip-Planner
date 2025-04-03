@@ -5,10 +5,10 @@
 <ul>
     @foreach (var trip in Model)
     {
-        <li>
+        <li> 
+            <h2>@trip.Title</h2> - @trip.Description
             @if (HttpContextAccessor.HttpContext.Session.GetInt32("UserId") == trip.OwnerId)
             {
-                <h2>@trip.Title</h2> - @trip.Description
                 <a href="/Trip/Unregister/@trip.Id">Unregister</a>
                 <a href="/Trip/Edit/@trip.Id">Edit</a>
                 <form method="post" action="/Trip/Delete/@trip.Id">
