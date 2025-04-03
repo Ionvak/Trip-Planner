@@ -1,12 +1,23 @@
 <form method="post">
     <input type="hidden" name="Id" value="@Model.Id" />
+    <br>
+    <div>
     <label>Title:</label>
     <input type="text" name="Title" value="@Model.Title" required />
+    </div>
+    <br>
+    <div>
     <label>Description:</label>
     <textarea name="Description" required>@Model.Description</textarea>
+    </div>
+    <div>
     <label>Capacity:</label>
     <input type="number" name="Capacity" value="@Model.Capacity" required />
+    </div>
+    <br>
+    <div>
     <label>Date:</label>
     <input type="date" name="Date" value="@Model.Date" required />
     <button type="submit">Save</button>
+    </div>
 </form>

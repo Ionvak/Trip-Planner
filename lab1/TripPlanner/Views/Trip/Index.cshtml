@@ -6,16 +6,13 @@
     @foreach (var trip in Model)
     {
         <li>
-            <h2>@trip.Title</h2> - @trip.Description
             @if (HttpContextAccessor.HttpContext.Session.GetInt32("UserId") == trip.OwnerId)
             {
+                <h2>@trip.Title</h2> - @trip.Description
                 <a href="/Trip/Unregister/@trip.Id">Unregister</a>
-            }
-            @if (HttpContextAccessor.HttpContext.Session.GetInt32("UserId") == trip.OwnerId)
-            {
                 <a href="/Trip/Edit/@trip.Id">Edit</a>
-                <form method="post" action="/Trip/Delete/@trip.Id" style="display:inline;">
-                    <button type="submit">Delete</button>
+                <form method="post" action="/Trip/Delete/@trip.Id">
+                <button type="submit">Delete</button>
                 </form>
             }
         </li>
