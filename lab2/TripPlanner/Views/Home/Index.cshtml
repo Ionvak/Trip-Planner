@@ -2,7 +2,19 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="jumbotron">
+    <h1>Trip Planner</h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Start Here!</h2>
+        <p>Login to your account if you have one, or make one if you don't, to view and participate in trips.'.</p>
+        <p><a class="btn btn-default" href="User/Login">Go to login page &raquo;</a></p>
+        <p><a class="btn btn-default" href="User/Register">Go to registration page &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>View Trips</h2>
+        <p>You can view a detailed view of all actve trips here (login required).</p>
+        <p><a class="btn btn-default" href="Trip/Index">See trips &raquo;</a></p>
+    </div>
 </div>

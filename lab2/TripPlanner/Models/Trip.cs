@@ -1,13 +1,15 @@
-﻿namespace TripPlanner.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TripPlanner.Models
 {
     public class Trip
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public int Capacity { get; set; }
-        public string Date { get; set; }
-        public int UserId { get; set; }
-        public List<User> Users { get; set; }
+        public int ID { get; set; }
+        public string? Description { get; set; }
+        public required string Title { get; set; }
+        public required int Capacity { get; set; }
+        public required string Date { get; set; }
+        public List<string> Owners { get; set; }
+        public ICollection<User> Users { get; set; }
     }
 }

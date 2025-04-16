@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace TripPlanner.Models
 {
     public class User
     {
-        public int Id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public List<Trip> Trips { get; set; }
+        public int ID { get; set; }
+        public ICollection<Trip> Trips { get; set; }
+        public required string Username { get; set; }
+        public required string Password { get; set; }
+        
     }
 }
