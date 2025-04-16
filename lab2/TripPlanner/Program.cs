@@ -1,3 +1,10 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using TripPlanner.Data;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+
+
 namespace TripPlanner
 {
     public class Program
@@ -8,6 +15,18 @@ namespace TripPlanner
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddHttpContextAccessor();
+
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Set session timeout
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))); // Ensure Npgsql is referenced
 
             var app = builder.Build();
 
@@ -21,6 +40,7 @@ namespace TripPlanner
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 

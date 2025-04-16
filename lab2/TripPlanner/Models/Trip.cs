@@ -7,7 +7,7 @@
         public string Description { get; set; }
         public int Capacity { get; set; }
         public string Date { get; set; }
-        public int OwnerId { get; set; }
+        public int UserId { get; set; }
         public List<User> Users { get; set; }
     }
 }
