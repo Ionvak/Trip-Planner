@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace TripPlanner.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class InitialMigrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -22,7 +22,7 @@ namespace TripPlanner.Migrations
                     Title = table.Column<string>(type: "text", nullable: false),
                     Capacity = table.Column<int>(type: "integer", nullable: false),
                     Date = table.Column<string>(type: "text", nullable: false),
-                    Owners = table.Column<List<string>>(type: "text[]", nullable: false)
+                    Owners = table.Column<List<string>>(type: "text[]", nullable: true)
                 },
                 constraints: table =>
                 {

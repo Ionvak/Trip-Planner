@@ -86,7 +86,7 @@ namespace TripPlanner.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Username,Password")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("Username,Password")] User user)
         {
             if (id != user.ID)
             {

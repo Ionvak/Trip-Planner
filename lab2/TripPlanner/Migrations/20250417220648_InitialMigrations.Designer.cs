@@ -12,8 +12,8 @@ using TripPlanner.Data;
 namespace TripPlanner.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250416225431_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20250417220648_InitialMigrations")]
+    partial class InitialMigrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,6 @@ namespace TripPlanner.Migrations
                         .HasColumnType("text");
 
                     b.PrimitiveCollection<List<string>>("Owners")
-                        .IsRequired()
                         .HasColumnType("text[]");
 
                     b.Property<string>("Title")

@@ -41,7 +41,6 @@ namespace TripPlanner.Migrations
                         .HasColumnType("text");
 
                     b.PrimitiveCollection<List<string>>("Owners")
-                        .IsRequired()
                         .HasColumnType("text[]");
 
                     b.Property<string>("Title")
