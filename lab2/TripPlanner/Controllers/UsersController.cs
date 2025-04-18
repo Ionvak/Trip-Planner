@@ -22,6 +22,14 @@ namespace TripPlanner.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
+            var UserId = HttpContext.Session.GetInt32("UserId");
+            if (UserId == null)
+            {
+                return RedirectToAction("Login", "Users");
+            }
+            var user = await _context.Users
+                .FirstOrDefaultAsync(m => m.ID == UserId);
+            ViewData["LoggedInUser"] = user;
             return View(await _context.Users.ToListAsync());
         }
 
@@ -54,7 +62,7 @@ namespace TripPlanner.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register([Bind("ID,Username,Password")] User user)
+        public async Task<IActionResult> Register([Bind("Username,Password")] User user)
         {
             try
             {
@@ -101,8 +109,9 @@ namespace TripPlanner.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Username,Password")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Username,Password")] User user)
         {
+            Console.WriteLine("UserID" + user.ID + " ID" + id);
             if (id != user.ID)
             {
                 return NotFound();
@@ -178,7 +187,7 @@ namespace TripPlanner.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login([Bind("Username,Password")] User user)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid)                                                       
             {
                 var temp = await _context.Users
                      .FirstOrDefaultAsync(m => m.Username == user.Username && m.Password == user.Password);

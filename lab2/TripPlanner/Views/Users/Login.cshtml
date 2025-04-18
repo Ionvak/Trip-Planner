@@ -38,3 +38,8 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
+
+@if (ViewBag.Error != null)
+{
+    <p>@ViewBag.Error</p>
+}

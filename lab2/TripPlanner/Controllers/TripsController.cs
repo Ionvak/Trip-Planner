@@ -22,6 +22,13 @@ namespace TripPlanner.Controllers
         // GET: Trips
         public async Task<IActionResult> Index()
         {
+            var UserId = HttpContext.Session.GetInt32("UserId");
+            if (UserId == null)
+            {
+                return RedirectToAction("Login", "Users");
+            }
+            ViewData["LoggedInUser"] = await _context.Users
+                .FirstOrDefaultAsync(m => m.ID == UserId);
             return View(await _context.Trips.ToListAsync());
         }
 
@@ -46,6 +53,11 @@ namespace TripPlanner.Controllers
         // GET: Trips/Create
         public IActionResult Create()
         {
+            var UserId = HttpContext.Session.GetInt32("UserId");
+            if (UserId == null)
+            {
+               return RedirectToAction("Login", "Users");
+            }
             return View();
         }
 
@@ -60,6 +72,13 @@ namespace TripPlanner.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    var UserId = HttpContext.Session.GetInt32("UserId");
+                    if (UserId == null)
+                    {
+                       return RedirectToAction("Login", "Users");
+                    }
+                    var user = await _context.Users.FindAsync(UserId);
+                    trip.Owners = new List<string> {user.Username};
                     _context.Add(trip);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
@@ -163,5 +182,6 @@ namespace TripPlanner.Controllers
         {
             return _context.Trips.Any(e => e.ID == id);
         }
+
     }
 }
