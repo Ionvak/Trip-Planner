@@ -9,7 +9,7 @@ namespace TripPlanner.Models
         public string? Description { get; set; }
         public required string Title { get; set; }
         public required int Capacity { get; set; }
-        public required string Date { get; set; }
+        public required DateTime Date { get; set; }
         public List<string>? Owners { get; set; }
         public ICollection<User>? Users { get; set; }
     }
