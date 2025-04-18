@@ -29,6 +29,11 @@ namespace TripPlanner.Controllers
             }
             ViewData["LoggedInUser"] = await _context.Users
                 .FirstOrDefaultAsync(m => m.ID == UserId);
+            if(ViewData["LoggedInUser"] == null)
+            {
+                ViewBag.Error = "Issues detecting logged in user. Please log in again.";
+                return RedirectToAction("Login", "Users");
+            }
             return View(await _context.Trips.ToListAsync());
         }
 
