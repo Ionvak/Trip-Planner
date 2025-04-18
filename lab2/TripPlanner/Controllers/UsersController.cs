@@ -168,5 +168,31 @@ namespace TripPlanner.Controllers
         {
             return _context.Users.Any(e => e.ID == id);
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login([Bind("Username,Password")] User user)
+        {
+            if (ModelState.IsValid)
+            {
+                var temp = await _context.Users
+                     .FirstOrDefaultAsync(m => m.Username == user.Username && m.Password == user.Password);
+                if (temp == null)
+                {
+                    ViewBag.Error = "Invalid username or password.";
+                    return View(user);
+                }
+
+                HttpContext.Session.SetInt32("UserId", temp.ID);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(user);
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<TripPlanner.Models.Trip>
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 
 @{
     ViewData["Title"] = "Index";
@@ -51,7 +52,7 @@
 				<td>
 					<a asp-action="Details" asp-route-id="@item.ID">Details</a>
                     <a asp-action="Register" asp-route-id="@item.ID">Register</a>
-					@if (true)
+					@if (HttpContextAccessor.HttpContext.Session.GetInt32("UserId") == item.ID)
 					{
                     <a asp-action="Edit" asp-route-id="@item.ID" > Edit </a> 
                     <a asp-action="Delete" asp-route-id="@item.ID" > Delete </a>
