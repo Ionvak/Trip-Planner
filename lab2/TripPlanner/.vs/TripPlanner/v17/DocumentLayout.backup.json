@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab2\\TripPlanner\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3D90A28C-B423-4B53-91D0-09688831FAC2}|TripPlanner.csproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab2\\tripplanner\\migrations\\20250419200740_xminupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D90A28C-B423-4B53-91D0-09688831FAC2}|TripPlanner.csproj|solutionrelative:migrations\\20250419200740_xminupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3D90A28C-B423-4B53-91D0-09688831FAC2}|TripPlanner.csproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab2\\tripplanner\\models\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D90A28C-B423-4B53-91D0-09688831FAC2}|TripPlanner.csproj|solutionrelative:models\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,19 +31,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20250419200740_XminUpdate.cs",
+              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab2\\TripPlanner\\Migrations\\20250419200740_XminUpdate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250419200740_XminUpdate.cs",
+              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab2\\TripPlanner\\Migrations\\20250419200740_XminUpdate.cs",
+              "RelativeToolTip": "Migrations\\20250419200740_XminUpdate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T20:11:53.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Trip.cs",
               "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab2\\TripPlanner\\Models\\Trip.cs",
               "RelativeDocumentMoniker": "Models\\Trip.cs",
               "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab2\\TripPlanner\\Models\\Trip.cs",
               "RelativeToolTip": "Models\\Trip.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-19T15:52:53.281Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab2\\TripPlanner\\Views\\Trips\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Trips\\Edit.cshtml",
@@ -52,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TripsController.cs",
               "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab2\\TripPlanner\\Controllers\\TripsController.cs",
               "RelativeDocumentMoniker": "Controllers\\TripsController.cs",
