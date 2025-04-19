@@ -13,8 +13,8 @@ using TripPlanner.Data;
 namespace TripPlanner.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250418165839_InitialMigrations")]
-    partial class InitialMigrations
+    [Migration("20250419200740_XminUpdate")]
+    partial class XminUpdate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,6 +49,12 @@ namespace TripPlanner.Migrations
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<uint>("xmin")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("xid")
+                        .HasColumnName("xmin");
 
                     b.HasKey("ID");
 

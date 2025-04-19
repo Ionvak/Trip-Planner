@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TripPlanner.Data;
+using TripPlanner.Migrations;
 using TripPlanner.Models;
 
 namespace TripPlanner.Controllers
@@ -49,7 +50,7 @@ namespace TripPlanner.Controllers
                 return NotFound();
             }
 
-            var trip = await _context.Trips.Include(t => t.Users)
+            var trip = await _context.Trips.Include(t => t.Users).AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (trip == null)
             {
@@ -100,6 +101,14 @@ namespace TripPlanner.Controllers
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
+                else
+                {
+                    foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        Console.WriteLine(error.ErrorMessage); // Log the error messages
+                    }
+                    return View(trip);
+                }
             }
             catch (DbUpdateException /* ex */)
             {
@@ -132,34 +141,79 @@ namespace TripPlanner.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Description,Title,Capacity,Date,Owners")] Trip trip)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Description,Title,Capacity,Date,Owners,xmin")] Trip trip)
         {
             if (id != trip.ID)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            //Retrieve item to update
+            var TripToUpdate = await _context.Trips.Include(t => t.Users)
+                .FirstOrDefaultAsync(t => t.ID == id);
+
+            if (TripToUpdate == null)
+            {
+                ModelState.AddModelError(string.Empty,
+                     "Unable to save changes. The trip was deleted by another user.");
+                return View(trip);
+            }
+
+            //Set the original value of the RowVersion property
+            _context.Entry(TripToUpdate).Property("xmin").OriginalValue = trip.xmin;
+
+            if (await TryUpdateModelAsync<Trip>(TripToUpdate, "", s=> s.Title, s=> s.Description, s=> s.Capacity,s=> s.Date))
             {
                 try
                 {
-                    _context.Update(trip);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (DbUpdateConcurrencyException ex)
                 {
-                    if (!TripExists(trip.ID))
+                    //Get client values
+                    var exceptionEntry = ex.Entries.Single();
+                    var clientValues = (Trip)exceptionEntry.Entity;
+
+                    //Get database values
+                    var databaseEntry = exceptionEntry.GetDatabaseValues();
+                    if (databaseEntry == null)
                     {
-                        return NotFound();
+                        ModelState.AddModelError(string.Empty,
+                            "Unable to save changes. The trip was deleted by another user.");
                     }
                     else
                     {
-                        throw;
+                        var databaseValues = (Trip)databaseEntry.ToObject();
+
+                        if (databaseValues.Title != clientValues.Title)
+                        {
+                            ModelState.AddModelError("Title", $"Current value: {databaseValues.Title}");
+                        }
+                        if (databaseValues.Date != clientValues.Date)
+                        {
+                            ModelState.AddModelError("Date", $"Current value: {databaseValues.Date}");
+                        }
+                        if (databaseValues.Description != clientValues.Description)
+                        {
+                            ModelState.AddModelError("Description", $"Current value: {databaseValues.Description}");
+                        }
+                        if (databaseValues.Capacity != clientValues.Capacity)
+                        {
+                            ModelState.AddModelError("Capacity", $"Current value: {databaseValues.Capacity}");
+                        }
+
+                        ModelState.AddModelError(string.Empty, "The record you attempted to edit "
+                                + "was modified by another user after you got the original value. The "
+                                + "edit operation was canceled and the current values in the database "
+                                + "have been displayed. If you still want to edit this record, click "
+                                + "the Save button again. Otherwise click the Back to List hyperlink.");
+                        TripToUpdate.xmin = (uint)databaseValues.xmin;
+                        ModelState.Remove("xmin");
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(trip);
+            return View(TripToUpdate);
         }
 
         // GET: Trips/Delete/5
@@ -219,6 +273,12 @@ namespace TripPlanner.Controllers
             if (UserId == null)
             {
                 return RedirectToAction("Login", "Users");
+            }
+
+            if (trip.Capacity <= trip.Users.Count)
+            {
+                TempData["Error"] = "The trip is already full.";
+                return RedirectToAction(nameof(Index));
             }
 
             var user = await _context.Users.FindAsync(UserId);
