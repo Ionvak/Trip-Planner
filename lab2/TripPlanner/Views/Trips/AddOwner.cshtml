@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Add Owner";
+}
+
+<h1>Add Owner</h1>
+
+@model TripPlanner.Models.Trip
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddOwner">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label for="newOwner" class="control-label">New Owner</label>
+                <input id="newOwner" name="newOwner" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add owner" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@if (ViewBag.Error != null)
+{
+    <p>@ViewBag.Error</p>
+}

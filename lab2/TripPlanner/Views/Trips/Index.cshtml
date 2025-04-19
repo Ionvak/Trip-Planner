@@ -52,8 +52,24 @@
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Owners)
+                @if (item.Owners != null)
+                    {
+                    foreach (var owner in item.Owners)
+                    {
+                    <li>@owner</li>
+                    }
+                }
             </td>
+            <td>
+                @if (item.Users != null)
+                    {
+                    @foreach (var user in item.Users)
+                    {
+                        <li>@user.Username</li>
+                    }
+                }
+            </td>
+
 				<td>
 					<a asp-action="Details" asp-route-id="@item.ID">Details</a>
                     <a asp-action="Register" asp-route-id="@item.ID">Register</a>
@@ -61,6 +77,7 @@
                     {
                     <a asp-action="Edit" asp-route-id="@item.ID" > Edit </a> 
                     <a asp-action="Delete" asp-route-id="@item.ID" > Delete </a>
+                    <a asp-action="AddOwner" asp-route-id="@item.ID"> Add owner </a>
                     }
             </td>
         </tr>
