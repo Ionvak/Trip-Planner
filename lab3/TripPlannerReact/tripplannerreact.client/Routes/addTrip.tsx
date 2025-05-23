@@ -5,7 +5,7 @@ export function AddTrip() {
 
     return (
         <>
-            { }
+            <h1>HEllo World</h1>
         </>);
 }
 
