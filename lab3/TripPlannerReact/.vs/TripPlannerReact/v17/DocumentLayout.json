@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|solutionrelative:tripplannerreact.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.client\\routes\\addtrip.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|solutionrelative:tripplannerreact.client\\routes\\addtrip.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.server\\models\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|solutionrelative:tripplannerreact.server\\models\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.client\\src\\item.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|solutionrelative:tripplannerreact.client\\src\\item.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.server\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|solutionrelative:tripplannerreact.server\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.client\\routes\\detailtrip.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|solutionrelative:tripplannerreact.client\\routes\\detailtrip.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.server\\controllers\\tripscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|solutionrelative:tripplannerreact.server\\controllers\\tripscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.client\\routes\\edittrip.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|solutionrelative:tripplannerreact.client\\routes\\edittrip.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|solutionrelative:tripplannerreact.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.client\\routes\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|solutionrelative:tripplannerreact.client\\routes\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.server\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|solutionrelative:tripplannerreact.server\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.client\\routes\\login.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|solutionrelative:tripplannerreact.client\\routes\\login.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|solutionrelative:tripplannerreact.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.client\\routes\\register.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|solutionrelative:tripplannerreact.client\\routes\\register.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|solutionrelative:tripplannerreact.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.client\\routes\\removetrip.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|solutionrelative:tripplannerreact.client\\routes\\removetrip.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.server\\tripplannerreact.server.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{95AFE990-08A2-45A9-B2A1-2C269F523B57}|TripPlannerReact.Server\\TripPlannerReact.Server.csproj|solutionrelative:tripplannerreact.server\\tripplannerreact.server.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|solutionrelative:tripplannerreact.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|c:\\users\\mahmoud 1\\documents\\github\\25l-egui-elshekh_ali-mahmoud\\lab3\\tripplannerreact\\tripplannerreact.client\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{5DD4A439-1007-C6FC-2A71-51CD7C2C17D7}|tripplannerreact.client\\tripplannerreact.client.esproj|solutionrelative:tripplannerreact.client\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,122 +50,136 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "TripPlannerReact.Server\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "TripPlannerReact.Server\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAkwAwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T20:40:23.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TripsController.cs",
-              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Controllers\\TripsController.cs",
-              "RelativeDocumentMoniker": "TripPlannerReact.Server\\Controllers\\TripsController.cs",
-              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Controllers\\TripsController.cs",
-              "RelativeToolTip": "TripPlannerReact.Server\\Controllers\\TripsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T20:39:52.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Program.cs",
-              "RelativeDocumentMoniker": "TripPlannerReact.Server\\Program.cs",
-              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Program.cs",
-              "RelativeToolTip": "TripPlannerReact.Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T19:41:52.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Models\\User.cs",
-              "RelativeDocumentMoniker": "TripPlannerReact.Server\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Models\\User.cs",
-              "RelativeToolTip": "TripPlannerReact.Server\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T19:13:47.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Trip.cs",
-              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Models\\Trip.cs",
-              "RelativeDocumentMoniker": "TripPlannerReact.Server\\Models\\Trip.cs",
-              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Models\\Trip.cs",
-              "RelativeToolTip": "TripPlannerReact.Server\\Models\\Trip.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T19:14:17.747Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "TripPlannerReact.Server\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "TripPlannerReact.Server\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T19:16:19.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\appsettings.json",
-              "RelativeDocumentMoniker": "TripPlannerReact.Server\\appsettings.json",
-              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\appsettings.json",
-              "RelativeToolTip": "TripPlannerReact.Server\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-21T19:41:56.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "TripPlannerReact.Server\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\Properties\\launchSettings.json",
-              "RelativeToolTip": "TripPlannerReact.Server\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-21T19:26:12.824Z",
+              "DocumentIndex": 9,
+              "Title": "main.tsx",
+              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\src\\main.tsx",
+              "RelativeDocumentMoniker": "tripplannerreact.client\\src\\main.tsx",
+              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\src\\main.tsx",
+              "RelativeToolTip": "tripplannerreact.client\\src\\main.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-05-22T08:08:48.467Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "TripPlannerReact.Server",
-              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\TripPlannerReact.Server.csproj",
-              "RelativeDocumentMoniker": "TripPlannerReact.Server\\TripPlannerReact.Server.csproj",
-              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\TripPlannerReact.Server.csproj",
-              "RelativeToolTip": "TripPlannerReact.Server\\TripPlannerReact.Server.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-21T19:37:19.862Z",
+              "Title": "App.tsx",
+              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\src\\App.tsx",
+              "RelativeDocumentMoniker": "tripplannerreact.client\\src\\App.tsx",
+              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\src\\App.tsx",
+              "RelativeToolTip": "tripplannerreact.client\\src\\App.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-05-22T08:09:01.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "removeTrip.tsx",
+              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\removeTrip.tsx",
+              "RelativeDocumentMoniker": "tripplannerreact.client\\Routes\\removeTrip.tsx",
+              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\removeTrip.tsx",
+              "RelativeToolTip": "tripplannerreact.client\\Routes\\removeTrip.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-05-23T19:11:26.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "register.tsx",
+              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\register.tsx",
+              "RelativeDocumentMoniker": "tripplannerreact.client\\Routes\\register.tsx",
+              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\register.tsx",
+              "RelativeToolTip": "tripplannerreact.client\\Routes\\register.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-05-23T19:11:25.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "login.tsx",
+              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\login.tsx",
+              "RelativeDocumentMoniker": "tripplannerreact.client\\Routes\\login.tsx",
+              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\login.tsx",
+              "RelativeToolTip": "tripplannerreact.client\\Routes\\login.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-05-23T19:11:24.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "index.tsx",
+              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\index.tsx",
+              "RelativeDocumentMoniker": "tripplannerreact.client\\Routes\\index.tsx",
+              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\index.tsx",
+              "RelativeToolTip": "tripplannerreact.client\\Routes\\index.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-05-23T19:07:37.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "editTrip.tsx",
+              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\editTrip.tsx",
+              "RelativeDocumentMoniker": "tripplannerreact.client\\Routes\\editTrip.tsx",
+              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\editTrip.tsx",
+              "RelativeToolTip": "tripplannerreact.client\\Routes\\editTrip.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-05-23T19:11:22.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "detailTrip.tsx",
+              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\detailTrip.tsx",
+              "RelativeDocumentMoniker": "tripplannerreact.client\\Routes\\detailTrip.tsx",
+              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\detailTrip.tsx",
+              "RelativeToolTip": "tripplannerreact.client\\Routes\\detailTrip.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-05-23T19:11:21.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "addTrip.tsx",
+              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\addTrip.tsx",
+              "RelativeDocumentMoniker": "tripplannerreact.client\\Routes\\addTrip.tsx",
+              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\Routes\\addTrip.tsx",
+              "RelativeToolTip": "tripplannerreact.client\\Routes\\addTrip.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-05-22T09:16:56.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "item.tsx",
+              "DocumentMoniker": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\src\\item.tsx",
+              "RelativeDocumentMoniker": "tripplannerreact.client\\src\\item.tsx",
+              "ToolTip": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\tripplannerreact.client\\src\\item.tsx",
+              "RelativeToolTip": "tripplannerreact.client\\src\\item.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-05-22T08:31:23.373Z",
               "EditorCaption": ""
             }
           ]

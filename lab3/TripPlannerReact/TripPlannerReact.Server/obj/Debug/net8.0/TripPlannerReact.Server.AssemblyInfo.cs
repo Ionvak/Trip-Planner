@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TripPlannerReact.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05fab8ad9146d59cce61cc180ff326740d531d39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+caebab081abaf2cbfc3b95569359022f1fd68817")]
 [assembly: System.Reflection.AssemblyProductAttribute("TripPlannerReact.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TripPlannerReact.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

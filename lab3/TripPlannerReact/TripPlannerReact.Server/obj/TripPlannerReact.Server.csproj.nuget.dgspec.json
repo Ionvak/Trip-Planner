@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.server\\TripPlannerReact.Server.csproj": {}
+    "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\TripPlannerReact.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.server\\TripPlannerReact.Server.csproj": {
+    "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\TripPlannerReact.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.server\\TripPlannerReact.Server.csproj",
+        "projectUniqueName": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\TripPlannerReact.Server.csproj",
         "projectName": "TripPlannerReact.Server",
-        "projectPath": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.server\\TripPlannerReact.Server.csproj",
+        "projectPath": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\TripPlannerReact.Server.csproj",
         "packagesPath": "C:\\Users\\Mahmoud 1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.server\\obj\\",
+        "outputPath": "C:\\Users\\Mahmoud 1\\Documents\\GitHub\\25L-EGUI-Elshekh_Ali-Mahmoud\\lab3\\TripPlannerReact\\TripPlannerReact.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -90,9 +90,17 @@
               "target": "Package",
               "version": "[9.0.4, )"
             },
+            "React.Web": {
+              "target": "Package",
+              "version": "[5.2.12, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "react.js": {
+              "target": "Package",
+              "version": "[0.14.7, )"
             }
           },
           "imports": [

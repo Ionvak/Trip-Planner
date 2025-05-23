@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eh+1JvTrOn0z1wk/tvxMn3PDmwJ0O4nP+OsJf4llDPc=",
+  "Hash": "GMbe0CW+n1Zaoq3FIa/A6b6yJtAkPNoWv3Z7/+ruTBU=",
   "Source": "TripPlannerReact.Server",
   "BasePath": "_content/TripPlannerReact.Server",
   "Mode": "Default",
@@ -11,11 +11,11 @@
       "Version": 2,
       "Source": "tripplannerreact.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "",
-      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "",
-      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     }
   ],
   "DiscoveryPatterns": [],
