@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
+import BootStrap from "react-bootstrap";
+
 import AddTrip from "../routes/addTrip";
 import RemoveTrip from "../routes/removeTrip";
 import EditTrip from "../routes/editTrip";
@@ -7,7 +9,7 @@ import DetailTrip from "../routes/detailTrip";
 import Login from "../routes/login";
 import Register from "../routes/register";
 export function Index() {
-
+    
     return (
         <>
             <BrowserRouter>
