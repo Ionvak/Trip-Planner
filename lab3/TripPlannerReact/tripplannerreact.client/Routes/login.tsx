@@ -5,6 +5,8 @@ export function Login() {
 
     return (
         <>
+            <hr/>
+            <h1>Login</h1>
             <form>
                 <Stack direction="vertical" gap={3} >
                     <Form.Group className="mb-3" controlId='username'>

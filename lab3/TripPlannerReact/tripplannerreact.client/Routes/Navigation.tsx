@@ -14,6 +14,7 @@ function Navigation() {
               <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
                       <Nav.Link onClick={() => navigate("/")}>Home</Nav.Link>
+                      <Nav.Link onClick={() => navigate("/users")}>Users</Nav.Link>
                       <Nav.Link onClick={() => navigate("/login")}>Login</Nav.Link>
                       <Nav.Link onClick={() => navigate("/register")}>Register</Nav.Link>
                   </Nav>
