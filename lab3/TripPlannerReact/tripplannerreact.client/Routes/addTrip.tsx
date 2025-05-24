@@ -5,7 +5,8 @@ export function AddTrip() {
 
     return (
         <>
-
+        <hr/>
+        <h1>Add Trip</h1>
         <form>
             <Stack direction="vertical" gap={3} >
                 <Form.Group className="mb-3" controlId='title'>

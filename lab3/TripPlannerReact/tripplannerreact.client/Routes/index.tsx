@@ -82,7 +82,7 @@ export function Index() {
                 )}
             </Table>
 
-            <Button variant="primary" onClick={() => navigate('/add')}>Add Trip</Button>
+            <Button variant="primary" onClick={() => navigate('/add-trip')}>Add Trip</Button>
         </>);
 }
 

@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Index from "../routes/index";
 import AddTrip from "../routes/addTrip";
+import AddUser from "../routes/addUser";
 import EditTrip from "../routes/editTrip";
 import DetailTrip from "../routes/detailTrip";
 import Login from "../routes/login";
@@ -23,7 +24,8 @@ export function App() {
                 <Container className="my-4">
                     <Routes>
                         <Route path="/" element={<Index />} />
-                        <Route path="/add" element={<AddTrip />} />
+                        <Route path="/add-trip" element={<AddTrip />} />
+                        <Route path="/add-user" element={<AddUser />} />
                         <Route path="/edit/:id" element={<EditTrip />} />
                         <Route path="/detail/:id" element={<DetailTrip />} />
                         <Route path="/users" element={<Users />} />

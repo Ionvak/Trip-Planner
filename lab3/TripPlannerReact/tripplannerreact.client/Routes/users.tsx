@@ -72,7 +72,7 @@ function Users() {
                   )
                   )}
 
-              <Button variant="primary" onClick={ () => navigate('/add')}>Add User</Button>
+              <Button variant="primary" onClick={ () => navigate('/add-user')}>Add User</Button>
           </Table>
       </>
   );
