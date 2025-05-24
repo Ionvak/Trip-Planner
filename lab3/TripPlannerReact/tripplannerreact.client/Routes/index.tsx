@@ -13,12 +13,6 @@ type trip = {
     users: string[];
 }
 
-function HandleRemove() {
-    // Function to handle the removal of a trip
-    // This is a placeholder function and should be implemented based on your requirements
-    console.log("Remove trip functionality not implemented yet.");
-}
-
 function HandleRegister() {
     // Function to handle the removal of a trip
     // This is a placeholder function and should be implemented based on your requirements
@@ -53,7 +47,6 @@ export function Index() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
-
     useEffect(() => {
         // Make GET request to fetch data
         axios
@@ -69,14 +62,27 @@ export function Index() {
             });
     }, []);
 
+    function HandleRemove(id: number) {
+
+        axios.delete('https://localhost:54387/api/Trips/' + id )
+            .then(() => {
+                console.log("Trip removed successfully");
+                setData(data.filter(trip => trip.id !== Number(id)));
+            }).catch((err) => {
+                console.error("Error removing trip:", err);
+                setError("Error removing trip");
+            }
+    )}
+
+
     if (loading) {
         return (
             <>
                 <Spinner animation="border" />
                 <div>Loading...</div>
             </>
-        )}
-    if (error) return <div>Error: {error}</div>;
+        )
+    }
 
     return (
         <>
@@ -103,7 +109,7 @@ export function Index() {
                             <td> { trip.users ?trip.users.toString() : null} </td>
                             <Button variant='outline-secondary' onClick={() => navigate(`/detail/${trip.id}`)}>Details</Button>
                             {IsOwner(trip) ? <Button variant='outline-secondary' onClick={() => navigate(`/edit-trip/${trip.id}`)}>Edit</Button> : null}
-                            {IsOwner(trip) ? <Button variant='outline-danger' onClick={() => HandleRemove()}>Remove</Button> : null}
+                            {IsOwner(trip) ? <Button variant='outline-danger' onClick={() => HandleRemove(trip.id)}>Remove</Button> : null}
                             {IsRegistered(trip) ? <Button variant='outline-warning' onClick={() => HandleRegister()}>Register</Button> : null}
                         </tr>
                     ) 
@@ -111,6 +117,8 @@ export function Index() {
             </Table>
 
             {IsLoggedIn() ? < Button variant="primary" onClick={() => navigate('/add-trip')}>Add Trip</Button > : null}
+            {error && <p>{error}</p>}
+
         </>);
 }
 
