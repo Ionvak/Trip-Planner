@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Index from "../routes/index";
 import AddTrip from "../routes/addTrip";
-import AddUser from "../routes/addUser";
 import EditTrip from "../routes/editTrip";
 import EditUser from "../routes/editUser";
 import DetailTrip from "../routes/detailTrip";
@@ -26,7 +25,6 @@ export function App() {
                     <Routes>
                         <Route path="/" element={<Index />} />
                         <Route path="/add-trip" element={<AddTrip />} />
-                        <Route path="/add-user" element={<AddUser />} />
                         <Route path="/edit-trip/:id" element={<EditTrip />} />
                         <Route path="/edit-user/:id" element={<EditUser />} />
                         <Route path="/detail/:id" element={<DetailTrip />} />

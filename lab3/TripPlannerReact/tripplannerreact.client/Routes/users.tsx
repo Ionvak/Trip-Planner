@@ -77,8 +77,6 @@ function Users() {
                       </tr>
                   )
                   )}
-
-              <Button variant="primary" onClick={ () => navigate('/add-user')}>Add User</Button>
           </Table>
       </>
   );

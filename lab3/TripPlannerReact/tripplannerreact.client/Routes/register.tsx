@@ -17,6 +17,7 @@ export function Register() {
         const newUser = {
             username: username,
             password: password,
+            trips: [],
         };
 
         if (!username || !password) {
@@ -29,10 +30,10 @@ export function Register() {
         axios
             .post("https://localhost:54387/api/Users", newUser)
             .then(() => {
-                setResponseMessage("Post created successfully!");
+                setResponseMessage("User created successfully!");
             })
             .catch(() => {
-                setResponseMessage("Error creating post");
+                setResponseMessage("Error creating user");
             });
     };
 

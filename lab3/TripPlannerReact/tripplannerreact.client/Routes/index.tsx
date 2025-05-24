@@ -24,7 +24,12 @@ function HandleRegister() {
     // This is a placeholder function and should be implemented based on your requirements
     console.log("Register to trip functionality not implemented yet.");
 }
-
+function IsLoggedIn() {
+    // Function to check if the user is the owner of the trip
+    // This is a placeholder function and should be implemented based on your requirements
+    console.log("Check if user is owner functionality not implemented yet.");
+    return true; // Placeholder return value
+}
 function IsOwner(trip:trip) {
     console.log(trip)
     // Function to check if the user is the owner of the trip
@@ -105,7 +110,7 @@ export function Index() {
                 )}
             </Table>
 
-            <Button variant="primary" onClick={() => navigate('/add-trip')}>Add Trip</Button>
+            {IsLoggedIn() ? < Button variant="primary" onClick={() => navigate('/add-trip')}>Add Trip</Button > : null}
         </>);
 }
 
