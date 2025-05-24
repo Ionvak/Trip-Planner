@@ -10,12 +10,6 @@ type user = {
     trips: string[];
 }
 
-function HandleRemove() {
-    // Function to handle the removal of a user
-    // This is a placeholder function and should be implemented based on your requirements
-    console.log("Remove user functionality not implemented yet.");
-}
-
 function IsOwner(user: user) {
     console.log(user)
     // Function to check if the user is the owner of the trip
@@ -23,7 +17,6 @@ function IsOwner(user: user) {
     console.log("Check if user is owner functionality not implemented yet.");
     return true; // Placeholder return value
 }
-
 
 function Users() {
 
@@ -46,6 +39,17 @@ function Users() {
                 setLoading(false);
             });
     }, []);
+
+    function HandleRemove(id: number) {
+        axios.delete('https://localhost:54387/api/Users/' + id)
+            .then(() => {
+                console.log("Trip removed successfully");
+                setData(data.filter(user => user.id !== id));
+            }).catch((err) => {
+                console.error("Error removing user:", err);
+                setError("Error removing user");
+            }
+)}
 
 
     if (loading) {
@@ -73,7 +77,7 @@ function Users() {
                           <td> {user.username} </td>
                           <td> { user.trips ? user.trips.toString() : null } </td>
                           {IsOwner(user) ? <Button variant='outline-secondary' onClick={() => navigate(`/edit-user/${user.id}`)}>Edit</Button> : null}
-                          {IsOwner(user) ? <Button variant='outline-danger' onClick={() => HandleRemove()}>Remove</Button> : null}
+                          {IsOwner(user) ? <Button variant='outline-danger' onClick={() => HandleRemove(user.id)}>Remove</Button> : null}
                       </tr>
                   )
                   )}

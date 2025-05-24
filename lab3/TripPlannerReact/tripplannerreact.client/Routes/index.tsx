@@ -67,7 +67,7 @@ export function Index() {
         axios.delete('https://localhost:54387/api/Trips/' + id )
             .then(() => {
                 console.log("Trip removed successfully");
-                setData(data.filter(trip => trip.id !== Number(id)));
+                setData(data.filter(trip => trip.id !== id));
             }).catch((err) => {
                 console.error("Error removing trip:", err);
                 setError("Error removing trip");
