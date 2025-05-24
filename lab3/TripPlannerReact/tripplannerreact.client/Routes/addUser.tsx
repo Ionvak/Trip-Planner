@@ -5,25 +5,17 @@ export function AddUser() {
 
     return (
         <>
-            <hr/>
-            <h1>Add User</h1>
+            <hr />
+            <h1>Login</h1>
             <form>
                 <Stack direction="vertical" gap={3} >
-                    <Form.Group className="mb-3" controlId='title'>
-                        <Form.Label>Trip Title</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Trip Title" />
+                    <Form.Group className="mb-3" controlId='username'>
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control type="text" placeholder="Enter Username" />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId='description'>
-                        < Form.Label>Trip Description</Form.Label>
-                        < Form.Control type="text" placeholder="Enter Trip Description" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId='capacity'>
-                        < Form.Label>Trip Capacity</Form.Label>
-                        < Form.Control type="number" placeholder="Enter Trip Capacity" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId='date'>
-                        < Form.Label>Trip Date</ Form.Label>
-                        < Form.Control type="date" placeholder="Enter Trip Date" />
+                    <Form.Group className="mb-3" controlId='password'>
+                        < Form.Label>Password</Form.Label>
+                        < Form.Control type="password" placeholder="Enter Password" />
                     </Form.Group>
                     <Button variant='primary' value="submit"> Submit </Button>
                     <Button variant='outline-danger' value="return to home"> Return to home </Button>

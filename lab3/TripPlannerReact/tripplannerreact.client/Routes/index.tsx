@@ -3,26 +3,47 @@ import { useNavigate } from "react-router-dom";
 import { Button, Table, Spinner } from "react-bootstrap";  
 import axios from "axios";
 
+type trip = {
+    id: number;
+    ownerId: number;
+    title: string;
+    description: string;
+    capacity: number;
+    date: string;
+    users: string[];
+}
+
 function HandleRemove() {
     // Function to handle the removal of a trip
     // This is a placeholder function and should be implemented based on your requirements
     console.log("Remove trip functionality not implemented yet.");
 }
 
+function HandleRegister() {
+    // Function to handle the removal of a trip
+    // This is a placeholder function and should be implemented based on your requirements
+    console.log("Register to trip functionality not implemented yet.");
+}
+
+function IsOwner(trip:trip) {
+    console.log(trip)
+    // Function to check if the user is the owner of the trip
+    // This is a placeholder function and should be implemented based on your requirements
+    console.log("Check if user is owner functionality not implemented yet.");
+    return true; // Placeholder return value
+}
+
+function IsRegistered(trip: trip) {
+    console.log(trip)
+    // Function to check if the user is the owner of the trip
+    // This is a placeholder function and should be implemented based on your requirements
+    console.log("Check if user is registered functionality not implemented yet.");
+    return true; // Placeholder return value
+}
+
 export function Index() {
 
     const navigate = useNavigate();
-
-    type trip = {
-        id: number;
-        ownerId: number;
-        title: string;
-        description: string;
-        capacity: number;
-        date: string;
-        users: string[];
-    }
-
     const [data, setData] = useState<trip[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -70,8 +91,9 @@ export function Index() {
                     data.map( (trip) => (
                         <tr>
                             <Button variant='outline-secondary' onClick={() => navigate(`/detail/${trip.id}`)}>Details</Button>
-                            <Button variant='outline-secondary' onClick={() => navigate(`/edit/${trip.id}`)}>Edit</Button>
-                            <Button variant='outline-danger' onClick={ () => HandleRemove() }>Remove</Button>
+                            {IsOwner(trip) ? <Button variant='outline-secondary' onClick={() => navigate(`/edit-trip/${trip.id}`)}>Edit</Button> : null}
+                            {IsOwner(trip) ? <Button variant='outline-danger' onClick={() => HandleRemove()}>Remove</Button> : null}
+                            {IsRegistered(trip) ? <Button variant='outline-warning' onClick={() => HandleRegister()}>Register</Button> : null}
                             <td> {trip.title} </td>
                             <td> {trip.description} </td>
                             <td> {trip.capacity} </td>

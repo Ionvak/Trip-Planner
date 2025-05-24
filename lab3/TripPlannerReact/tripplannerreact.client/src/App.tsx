@@ -8,6 +8,7 @@ import Index from "../routes/index";
 import AddTrip from "../routes/addTrip";
 import AddUser from "../routes/addUser";
 import EditTrip from "../routes/editTrip";
+import EditUser from "../routes/editUser";
 import DetailTrip from "../routes/detailTrip";
 import Login from "../routes/login";
 import Register from "../routes/register";
@@ -26,7 +27,8 @@ export function App() {
                         <Route path="/" element={<Index />} />
                         <Route path="/add-trip" element={<AddTrip />} />
                         <Route path="/add-user" element={<AddUser />} />
-                        <Route path="/edit/:id" element={<EditTrip />} />
+                        <Route path="/edit-trip/:id" element={<EditTrip />} />
+                        <Route path="/edit-user/:id" element={<EditUser />} />
                         <Route path="/detail/:id" element={<DetailTrip />} />
                         <Route path="/users" element={<Users />} />
                         <Route path="/login" element={<Login />} />
@@ -37,6 +39,7 @@ export function App() {
 
         </>);
 }
+
 
 export default App;
 

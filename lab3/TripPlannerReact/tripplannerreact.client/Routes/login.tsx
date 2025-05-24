@@ -1,7 +1,16 @@
-import React from "react";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button, Form, Stack } from "react-bootstrap";
 
+function HandleSubmit() {
+    // Function to handle the submission of the login form
+    // This is a placeholder function and should be implemented based on your requirements
+    console.log("Login functionality not implemented yet.");
+}
+
 export function Login() {
+
+    const navigate = useNavigate();
 
     return (
         <>
@@ -17,8 +26,8 @@ export function Login() {
                         < Form.Label>Password</Form.Label>
                         < Form.Control type="password" placeholder="Enter Password" />
                     </Form.Group>
-                    <Button variant='primary' value="submit"> Submit </Button>
-                    <Button variant='outline-danger' value="return to home"> Return to home </Button>  
+                    <Button variant='primary' onClick={ () => HandleSubmit() } type="submit"> Submit </Button>
+                    <Button variant='outline-danger' onClick={ () => navigate('/') } > Return to home </Button>  
                 </Stack>
             </form>
         </>);

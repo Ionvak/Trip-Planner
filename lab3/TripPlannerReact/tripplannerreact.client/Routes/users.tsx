@@ -3,6 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { Button, Table, Spinner } from "react-bootstrap";
 import axios from "axios";
 
+type user = {
+    id: number;
+    username: string;
+    password: string;
+    trips: string[];
+}
 
 function HandleRemove() {
     // Function to handle the removal of a user
@@ -10,17 +16,18 @@ function HandleRemove() {
     console.log("Remove user functionality not implemented yet.");
 }
 
+function IsOwner(user: user) {
+    console.log(user)
+    // Function to check if the user is the owner of the trip
+    // This is a placeholder function and should be implemented based on your requirements
+    console.log("Check if user is owner functionality not implemented yet.");
+    return false; // Placeholder return value
+}
+
+
 function Users() {
 
     const navigate = useNavigate();
-
-    type user = {
-        id: number;
-        username: string;
-        password: string;
-        trips: string[];
-    }
-
     const [data, setData] = useState<user[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -64,8 +71,8 @@ function Users() {
               {
                   data.map((user) => (
                       <tr>
-                          <Button variant='outline-secondary' onClick={() => navigate(`/edit/${user.id}`)}>Edit</Button>
-                          <Button variant='outline-danger' onClick={() => HandleRemove()}>Remove</Button>
+                          {IsOwner(user) ? <Button variant='outline-secondary' onClick={() => navigate(`/edit-user/${user.id}`)}>Edit</Button> : null}
+                          {IsOwner(user) ? <Button variant='outline-danger' onClick={() => HandleRemove()}>Remove</Button> : null}
                           <td> {user.username} </td>
                           {user.trips ? <td> {user.trips.toString()} </td> : null}
                       </tr>
