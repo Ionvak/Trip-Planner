@@ -71,7 +71,7 @@ export function Index() {
                 <div>Loading...</div>
             </>
         )}
-        if (error) return <div>Error: {error}</div>;
+    if (error) return <div>Error: {error}</div>;
 
     return (
         <>
@@ -90,15 +90,16 @@ export function Index() {
                 {
                     data.map( (trip) => (
                         <tr>
-                            <Button variant='outline-secondary' onClick={() => navigate(`/detail/${trip.id}`)}>Details</Button>
-                            {IsOwner(trip) ? <Button variant='outline-secondary' onClick={() => navigate(`/edit-trip/${trip.id}`)}>Edit</Button> : null}
-                            {IsOwner(trip) ? <Button variant='outline-danger' onClick={() => HandleRemove()}>Remove</Button> : null}
-                            {IsRegistered(trip) ? <Button variant='outline-warning' onClick={() => HandleRegister()}>Register</Button> : null}
                             <td> {trip.title} </td>
                             <td> {trip.description} </td>
                             <td> {trip.capacity} </td>
                             <td> {trip.date} </td>
-                            { trip.users ? <td> {trip.users.toString()} </td> : null}
+                            <td>{ }</td>
+                            <td> { trip.users ?trip.users.toString() : null} </td>
+                            <Button variant='outline-secondary' onClick={() => navigate(`/detail/${trip.id}`)}>Details</Button>
+                            {IsOwner(trip) ? <Button variant='outline-secondary' onClick={() => navigate(`/edit-trip/${trip.id}`)}>Edit</Button> : null}
+                            {IsOwner(trip) ? <Button variant='outline-danger' onClick={() => HandleRemove()}>Remove</Button> : null}
+                            {IsRegistered(trip) ? <Button variant='outline-warning' onClick={() => HandleRegister()}>Register</Button> : null}
                         </tr>
                     ) 
                 )}

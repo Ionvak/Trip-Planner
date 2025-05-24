@@ -21,7 +21,7 @@ function IsOwner(user: user) {
     // Function to check if the user is the owner of the trip
     // This is a placeholder function and should be implemented based on your requirements
     console.log("Check if user is owner functionality not implemented yet.");
-    return false; // Placeholder return value
+    return true; // Placeholder return value
 }
 
 
@@ -64,17 +64,16 @@ function Users() {
           <h1>Users</h1>
           <Table striped bordered responsive hover size="lg">
               <tr>
-                  <th></th>
                   <th>Username</th>
                   <th>Registered Trips</th>
               </tr>
               {
                   data.map((user) => (
                       <tr>
+                          <td> {user.username} </td>
+                          <td> { user.trips ? user.trips.toString() : null } </td>
                           {IsOwner(user) ? <Button variant='outline-secondary' onClick={() => navigate(`/edit-user/${user.id}`)}>Edit</Button> : null}
                           {IsOwner(user) ? <Button variant='outline-danger' onClick={() => HandleRemove()}>Remove</Button> : null}
-                          <td> {user.username} </td>
-                          {user.trips ? <td> {user.trips.toString()} </td> : null}
                       </tr>
                   )
                   )}
