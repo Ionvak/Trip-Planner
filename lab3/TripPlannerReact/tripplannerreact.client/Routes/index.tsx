@@ -1,43 +1,28 @@
 import React from "react";
-import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
-import BootStrap from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { Navbar, Nav } from 'react-bootstrap'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import AddTrip from "../routes/addTrip";
-import RemoveTrip from "../routes/removeTrip";
-import EditTrip from "../routes/editTrip";
-import DetailTrip from "../routes/detailTrip";
-import Login from "../routes/login";
-import Register from "../routes/register";
 export function Index() {
-    
+
+    const navigate = useNavigate();
+
     return (
         <>
-            <BrowserRouter>
             <nav>
-                <li>
-                    <Link to="/login">Login</Link>|
-                </li>
-                <li>
-                    <Link to="/register">Register</Link>|
-                </li>
-                
-                <li>
-                    <Link to="/add">Add a trip</Link>|
-                </li>
-                <li>
-                        <Link to="/remove">Remove a trip</Link>
-                </li>
+                <Navbar expand='lg'>
+                    <Navbar.Brand onClick={() => navigate("/")}>Trip Planner</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="me-auto">
+                                <Nav.Link onClick={() => navigate("/")}>Home</Nav.Link>
+                                <Nav.Link onClick={() => navigate("/add")}>Add Trip</Nav.Link>
+                                <Nav.Link onClick={() => navigate("/login")}>Login</Nav.Link>
+                                <Nav.Link onClick={() => navigate("/register")}>Register</Nav.Link>
+                            </Nav>
+                        </Navbar.Collapse>
+                </Navbar>    
             </nav>
-
-                <Routes>
-                    <Route path="/add" element={<AddTrip />} />
-                    <Route path="/edit/:id" element={<EditTrip />} />
-                    <Route path="/remove/:id" element={<RemoveTrip />} />
-                    <Route path="/detail/:id" element={<DetailTrip />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                </Routes>
-            </BrowserRouter>
         </>);
 }
 
