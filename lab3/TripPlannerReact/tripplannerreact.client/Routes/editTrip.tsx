@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Stack } from "react-bootstrap";
+import { Button, Form, Stack } from "react-bootstrap";
 
 export function EditTrip() {
 
@@ -23,6 +23,8 @@ export function EditTrip() {
                         < Form.Label>Trip Date</ Form.Label>
                         < Form.Control type="date" placeholder="Enter Trip Date" />
                     </Form.Group>
+                    <Button variant='primary' value="submit"> Submit </Button>
+                    <Button variant='outline-danger' value="return to home"> Return to home </Button>  
                 </Stack>
             </form>
         </>);

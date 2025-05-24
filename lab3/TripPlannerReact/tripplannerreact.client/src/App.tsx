@@ -2,6 +2,7 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Index from "../routes/index";
 import AddTrip from "../routes/addTrip";
@@ -10,6 +11,7 @@ import EditTrip from "../routes/editTrip";
 import DetailTrip from "../routes/detailTrip";
 import Login from "../routes/login";
 import Register from "../routes/register";
+import Navigation from "../routes/Navigation";
 
 
 export function App() {
@@ -17,6 +19,8 @@ export function App() {
     return (
         <>
             <BrowserRouter>
+                <Navigation />
+
                 <Container className="my-4">
                     <Routes>
                         <Route path="/" element={<Index />} />

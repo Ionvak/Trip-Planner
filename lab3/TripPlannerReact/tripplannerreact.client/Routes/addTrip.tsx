@@ -1,10 +1,11 @@
 import React from "react";
-import { Form, Stack } from "react-bootstrap";
+import { Button, Form, Stack } from "react-bootstrap";
 
 export function AddTrip() {
 
     return (
         <>
+
         <form>
             <Stack direction="vertical" gap={3} >
                 <Form.Group className="mb-3" controlId='title'>
@@ -22,7 +23,9 @@ export function AddTrip() {
                 <Form.Group className="mb-3" controlId='date'>
                     < Form.Label>Trip Date</ Form.Label>
                     < Form.Control type="date" placeholder="Enter Trip Date" />
-                </Form.Group>
+                    </Form.Group>
+                    <Button variant='primary' value="submit"> Submit </Button>
+                    <Button variant='outline-danger' value="return to home"> Return to home </Button>  
             </Stack>
         </form>
         </>);
