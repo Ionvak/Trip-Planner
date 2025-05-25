@@ -33,6 +33,7 @@ export function AddTrip() {
                 setLoading(false);
             })
             .catch((err) => {
+                console.log(err);
                 setResponseMessage(err.message);
                 setLoading(false);
             });
@@ -49,7 +50,9 @@ export function AddTrip() {
             return;
         }
 
-        const owner = data.find((user) => user.username === loggedIn)
+        //Insert or change code to insert owner into users list
+
+        const owner = data.find((user) => user.username === loggedIn); 
 
         const newTrip = {
             title: title,
@@ -57,9 +60,8 @@ export function AddTrip() {
             description: description,
             capacity: capacity,
             date: date,
-            users: []
+            users: [loggedIn],
         };
-
             axios
                 .post("https://localhost:54387/api/Trips", newTrip)
                 .then((response) => {

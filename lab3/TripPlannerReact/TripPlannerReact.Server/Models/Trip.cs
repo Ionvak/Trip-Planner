@@ -13,7 +13,7 @@ namespace TripPlannerReact.Server.Models
         public required string Title { get; set; }
         public required int Capacity { get; set; }
         public required DateTime Date { get; set; }
-        public ICollection<User>? Users { get; set; }
+        public ICollection<string>? Users { get; set; }
     }
 }
 
