@@ -8,7 +8,6 @@ import Index from "../routes/index";
 import AddTrip from "../routes/addTrip";
 import EditTrip from "../routes/editTrip";
 import EditUser from "../routes/editUser";
-import DetailTrip from "../routes/detailTrip";
 import Login from "../routes/login";
 import Register from "../routes/register";
 import Navigation from "../routes/Navigation";
@@ -33,7 +32,6 @@ export function App() {
                             <Route path="/add-trip" element={<AddTrip />} />
                             <Route path="/edit-trip/:id" element={<EditTrip />} />
                             <Route path="/edit-user/:id" element={<EditUser />} />
-                            <Route path="/detail/:id" element={<DetailTrip />} />
                             <Route path="/users" element={<Users />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />

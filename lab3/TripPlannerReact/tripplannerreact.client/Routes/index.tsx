@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, use } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Table, Spinner } from "react-bootstrap";  
 import axios from "axios";
@@ -19,20 +19,6 @@ type user = {
     username: string;
     password: string;
     trips: string[];
-}
-
-function HandleRegister() {
-    // Function to handle the removal of a trip
-    // This is a placeholder function and should be implemented based on your requirements
-    console.log("Register to trip functionality not implemented yet.");
-}
-
-function IsRegistered(trip: trip) {
-    console.log(trip)
-    // Function to check if the user is the owner of the trip
-    // This is a placeholder function and should be implemented based on your requirements
-    console.log("Check if user is registered functionality not implemented yet.");
-    return true; // Placeholder return value
 }
 
 export function Index() {
@@ -93,6 +79,42 @@ export function Index() {
         return Boolean(loggedIn)
     }
 
+    function HandleRegister(trip: trip) {
+        const loggedInUser = users.find(user => user.username === loggedIn);
+
+        if (!loggedInUser) {
+            setError("You are either not logged in, or your profile was deleted. Please try again..");
+            return;
+        }
+
+        trip.users = trip.users || [];
+        loggedInUser.trips = loggedInUser!.trips || [];
+
+        console.log("Logged in user trips:", loggedInUser);
+        console.log("Users of the trip:", trip.users);
+
+        if (trip.users.length >= trip.capacity) {
+            setError("Trip is already full.");
+            return;
+        }
+
+        if (trip.users.includes(loggedIn)) {
+            setError("You are already registered for this trip.");
+            return;
+        }
+
+        trip.users.push(loggedIn);
+        loggedInUser.trips.push(trip.title);
+        navigate('/');
+    }
+
+    function IsRegistered(trip: trip) {
+        if (trip.users && trip.users.some(user => user === loggedIn)) {
+            return true;
+        }
+        return false;
+    }
+
 
     if (loading) {
         return (
@@ -123,10 +145,9 @@ export function Index() {
                             <td> {trip.capacity} </td>
                             <td> {trip.date} </td>
                             <td> { trip.users ?trip.users.toString() : null} </td>
-                            <Button variant='outline-secondary' onClick={() => navigate(`/detail/${trip.id}`)}>Details</Button>
                             {IsOwner(trip) ? <Button variant='outline-secondary' onClick={() => navigate(`/edit-trip/${trip.id}`)}>Edit</Button> : null}
                             {IsOwner(trip) ? <Button variant='outline-danger' onClick={() => HandleRemove(trip.id)}>Remove</Button> : null}
-                            {IsRegistered(trip) ? null : <Button variant='outline-warning' onClick={() => HandleRegister()}>Register</Button>}
+                            {!IsLoggedIn() || IsRegistered(trip) ? null : <Button variant='outline-warning' onClick={() => HandleRegister(trip)}>Register</Button>}
                         </tr>
                     ) 
                 )}
