@@ -6,7 +6,7 @@ import { LoggedinContext } from "../src/loggedIn";
 
 type trip = {
     id: number;
-    ownerId: number;
+    ownerID: number;
     title: string;
     description: string;
     capacity: number;
@@ -14,18 +14,17 @@ type trip = {
     users: string[];
 }
 
+type user = {
+    id: number;
+    username: string;
+    password: string;
+    trips: string[];
+}
+
 function HandleRegister() {
     // Function to handle the removal of a trip
     // This is a placeholder function and should be implemented based on your requirements
     console.log("Register to trip functionality not implemented yet.");
-}
-
-function IsOwner(trip:trip) {
-    console.log(trip)
-    // Function to check if the user is the owner of the trip
-    // This is a placeholder function and should be implemented based on your requirements
-    console.log("Check if user is owner functionality not implemented yet.");
-    return true; // Placeholder return value
 }
 
 function IsRegistered(trip: trip) {
@@ -40,6 +39,7 @@ export function Index() {
 
     const navigate = useNavigate();
     const [data, setData] = useState<trip[]>([]);
+    const [users, setUsers] = useState<user[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const { loggedIn } = useContext(LoggedinContext);
@@ -57,7 +57,24 @@ export function Index() {
                 setError(err.message);
                 setLoading(false);
             });
+
+        axios
+            .get("https://localhost:54387/api/Users")
+            .then((response) => {
+                console.log(response.data);
+                setUsers(response.data);
+                setLoading(false);
+            })
+            .catch((err) => {
+                setError(err.message);
+                setLoading(false);
+            });
     }, []);
+
+    function IsOwner(trip: trip) {
+        return users.some(user => user.id === trip.ownerID && user.username === loggedIn);
+    }
+
 
     function HandleRemove(id: number) {
 
@@ -96,7 +113,6 @@ export function Index() {
                     <th>Trip Description</th>
                     <th>Trip Capacity</th>
                     <th>Trip Date</th>
-                    <th>Trip Owner</th>
                     <th>Registered Users</th>
                 </tr>
                 {
@@ -106,12 +122,11 @@ export function Index() {
                             <td> {trip.description} </td>
                             <td> {trip.capacity} </td>
                             <td> {trip.date} </td>
-                            <td>{ }</td>
                             <td> { trip.users ?trip.users.toString() : null} </td>
                             <Button variant='outline-secondary' onClick={() => navigate(`/detail/${trip.id}`)}>Details</Button>
                             {IsOwner(trip) ? <Button variant='outline-secondary' onClick={() => navigate(`/edit-trip/${trip.id}`)}>Edit</Button> : null}
                             {IsOwner(trip) ? <Button variant='outline-danger' onClick={() => HandleRemove(trip.id)}>Remove</Button> : null}
-                            {IsRegistered(trip) ? <Button variant='outline-warning' onClick={() => HandleRegister()}>Register</Button> : null}
+                            {IsRegistered(trip) ? null : <Button variant='outline-warning' onClick={() => HandleRegister()}>Register</Button>}
                         </tr>
                     ) 
                 )}

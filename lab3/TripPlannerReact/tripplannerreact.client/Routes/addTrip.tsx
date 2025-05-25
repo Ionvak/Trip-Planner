@@ -1,7 +1,16 @@
-import { useState, useContext, type FormEvent } from "react";
-import { Button, Form, Stack } from "react-bootstrap";
+import { useState, useContext, type FormEvent, useEffect } from "react";
+import { Button, Form, Spinner, Stack } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import { LoggedinContext } from "../src/loggedIn";
+
+
+type user = {
+    id: number;
+    username: string;
+    password: string;
+    trips: string[];
+}
 
 export function AddTrip() {
 
@@ -11,37 +20,65 @@ export function AddTrip() {
     const [capacity, setCapacity] = useState(0);
     const [date, setDate] = useState(new Date());
     const [responseMessage, setResponseMessage] = useState("");
+    const { loggedIn } = useContext(LoggedinContext);
+    const [data, setData] = useState<user[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        axios
+            .get("https://localhost:54387/api/Users")
+            .then((response) => {
+                console.log(response.data);
+                setData(response.data);
+                setLoading(false);
+            })
+            .catch((err) => {
+                setResponseMessage(err.message);
+                setLoading(false);
+            });
+    }, []);
 
     function HandleSubmit(event: FormEvent) {
         event.preventDefault();
 
-        const newTrip = {
-            title: title,
-            description: description,
-            capacity: capacity,
-            date: date,
-            users: []
-        };
-
         if (!date || !title || !capacity) {
-            setResponseMessage("The following are required:\n" + 
+            setResponseMessage("The following are required:\n" +
                 "Title,\n" +
                 "Capacity,\n" +
                 "Date\n");
             return;
         }
 
+        const owner = data.find((user) => user.username === loggedIn)
 
-        axios
-            .post("https://localhost:54387/api/Trips", newTrip)
-            .then((response) => {
-                console.log(response.data);
-                navigate('/');
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        const newTrip = {
+            title: title,
+            OwnerID: owner?.id,
+            description: description,
+            capacity: capacity,
+            date: date,
+            users: []
+        };
+
+            axios
+                .post("https://localhost:54387/api/Trips", newTrip)
+                .then((response) => {
+                    console.log(response.data);
+                    navigate('/');
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
     };
+
+    if (loading) {
+        return (
+            <>
+                <Spinner animation="border" />
+                <div>Loading...</div>
+            </>
+        )
+    }
 
     return (
         <>
