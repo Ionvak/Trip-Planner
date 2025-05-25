@@ -29,11 +29,12 @@ export function Register() {
         // Make POST request to send data
         axios
             .post("https://localhost:54387/api/Users", newUser)
-            .then(() => {
-                setResponseMessage("User created successfully!");
+            .then((response) => {
+                console.log(response.data);
+                navigate('/');
             })
-            .catch(() => {
-                setResponseMessage("Error creating user");
+            .catch((err) => {
+                console.log(err);
             });
     };
 

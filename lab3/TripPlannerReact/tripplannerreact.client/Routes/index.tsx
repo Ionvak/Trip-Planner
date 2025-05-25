@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Table, Spinner } from "react-bootstrap";  
 import axios from "axios";
+import { LoggedinContext } from "../src/loggedIn";
 
 type trip = {
     id: number;
@@ -18,12 +19,7 @@ function HandleRegister() {
     // This is a placeholder function and should be implemented based on your requirements
     console.log("Register to trip functionality not implemented yet.");
 }
-function IsLoggedIn() {
-    // Function to check if the user is the owner of the trip
-    // This is a placeholder function and should be implemented based on your requirements
-    console.log("Check if user is owner functionality not implemented yet.");
-    return true; // Placeholder return value
-}
+
 function IsOwner(trip:trip) {
     console.log(trip)
     // Function to check if the user is the owner of the trip
@@ -46,6 +42,7 @@ export function Index() {
     const [data, setData] = useState<trip[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const { loggedIn } = useContext(LoggedinContext);
 
     useEffect(() => {
         // Make GET request to fetch data
@@ -72,7 +69,12 @@ export function Index() {
                 console.error("Error removing trip:", err);
                 setError("Error removing trip");
             }
-    )}
+        )
+    }
+
+    function IsLoggedIn() {
+        return Boolean(loggedIn)
+    }
 
 
     if (loading) {
@@ -90,7 +92,6 @@ export function Index() {
             <h1>Trips</h1>
             <Table striped bordered responsive hover size="lg">
                 <tr>
-                    <th></th>
                     <th>Trip Title</th>
                     <th>Trip Description</th>
                     <th>Trip Capacity</th>

@@ -36,11 +36,10 @@ export function AddTrip() {
             .post("https://localhost:54387/api/Trips", newTrip)
             .then((response) => {
                 console.log(response.data);
-                setResponseMessage("Trip created successfully!");
+                navigate('/');
             })
             .catch((err) => {
                 console.log(err);
-                setResponseMessage("Error creating trip");
             });
     };
 

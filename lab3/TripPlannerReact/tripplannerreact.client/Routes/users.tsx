@@ -60,7 +60,6 @@ function Users() {
             </>
         )
     }
-    if (error) return <div>Error: {error}</div>;
 
     return (
       <>
@@ -81,7 +80,8 @@ function Users() {
                       </tr>
                   )
                   )}
-          </Table>
+            </Table>
+            {error && <p>{error}</p>}
       </>
   );
 }
