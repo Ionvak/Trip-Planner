@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Table, Spinner } from "react-bootstrap";
 import axios from "axios";
+import { LoggedinContext } from "../src/loggedIn";
 
 type user = {
     id: number;
@@ -10,20 +11,13 @@ type user = {
     trips: string[];
 }
 
-function IsOwner(user: user) {
-    console.log(user)
-    // Function to check if the user is the owner of the trip
-    // This is a placeholder function and should be implemented based on your requirements
-    console.log("Check if user is owner functionality not implemented yet.");
-    return true; // Placeholder return value
-}
-
 function Users() {
 
     const navigate = useNavigate();
     const [data, setData] = useState<user[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const { loggedIn, setLoggedIn } = useContext(LoggedinContext);
 
 
     useEffect(() => {
@@ -45,11 +39,20 @@ function Users() {
             .then(() => {
                 console.log("Trip removed successfully");
                 setData(data.filter(user => user.id !== id));
+                if(!data.some( (user) => user.username === loggedIn )) {
+                    setLoggedIn("");
+                    setError("Logged in user removed, please log in again.");
+                }
             }).catch((err) => {
                 console.error("Error removing user:", err);
                 setError("Error removing user");
             }
-)}
+        )
+    }
+
+    function IsOwner(user: user) {
+        return user.username === loggedIn; 
+    }
 
 
     if (loading) {
